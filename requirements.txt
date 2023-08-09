@@ -1,0 +1,3 @@
+opencv-python
+tweepy
+requests_oauthlib
