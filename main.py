@@ -1,14 +1,20 @@
 from requests_oauthlib import OAuth1Session
 import io, cv2, tweepy, random
 
+import os
+from dotenv import load_dotenv
 
+# Load environment variables from .env
+load_dotenv()
+
+# Access environment variables
+consumer_key = os.getenv("CONSUMER_KEY")
+consumer_secret = os.getenv("CONSUMER_KEY_SECRET")
+access_token = os.getenv("ACCESS_TOKEN")
+access_token_secret = os.getenv("ACESS_TOKEN_SECRET")
 
 
 def I(req):
-    consumer_key = "DfZOSaPl5etxaweh44qtHHro1"
-    consumer_secret = "FpPdcpoIscaGOuADEASpSzMsf6ScW6V6MEI76JIAog6ruIotCW"
-    access_token = "1682818789451104257-nrM3pkwKh2pgkp60QGw4bmIfyqNf1V"
-    access_token_secret = "nYKGKYuKeVz8pCGebU05rBLL53g1QZFmcMZsOYrqviOI6"
     num_of_eps = 55
     upload_url = "https://api.twitter.com/2/tweets"
     headers = {"Content-Type": "application/json"}
